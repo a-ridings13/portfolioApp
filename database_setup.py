@@ -28,6 +28,17 @@ class Resume(Base):
     myinfo_id = Column(Integer, ForeignKey('myinformation.id'))
     myinformation = relationship(MyInfo)
 
+class Contact(Base):
+
+    __tablename__ = 'contact_info'
+
+    id = Column(Integer, primary_key = True)
+    phone = Column(String(80), nullable = False)
+    email = Column(String(80), nullable = False)
+    myinfo_id = Column(Integer, ForeignKey('myinformation.id'))
+    myinformation = relationship(MyInfo)
+
+
 #######insert at end of file#######
 
 engine = create_engine('sqlite:///myportfolio.db')
