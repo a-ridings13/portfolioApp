@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask import Flask, render_template, url_for
 from sqlalchemy import create_engine, desc, asc
 from sqlalchemy.orm import sessionmaker
@@ -14,12 +15,12 @@ session = DBSession()
 @app.route("/")
 @app.route("/myportfolio")
 def landingpage():
-    items = session.query(Resume).order_by(asc(Resume.id))
-    return render_template('resume.html', items=items)
+    return "this will be the main landing page for viewers"
 
 @app.route("/resume")
 def myresume():
-    return "this page will display my resume information"
+    items = session.query(Resume).order_by(asc(Resume.id))
+    return render_template('resume.html', items=items)
 
 @app.route("/contact")
 def contactme():
