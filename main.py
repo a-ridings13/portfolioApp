@@ -1,12 +1,12 @@
 #!/usr/bin/env python
-from flask import Flask, render_template, url_for
+from flask import Flask, render_template, url_for, redirect, jsonify
 from sqlalchemy import create_engine, desc, asc
 from sqlalchemy.orm import sessionmaker
-from database_setup import MyInfo, Base, Resume
+from database_setup import MyInfo, Base, Resume, Contact
 
 app = Flask(__name__)
 
-engine = create_engine('sqlite:///myportfolio.db')
+engine = create_engine('sqlite:///myportfolio.db', connect_args={'check_same_thread': False})
 Base.metadata.bind = engine
 
 DBSession = sessionmaker(bind=engine)
@@ -15,7 +15,8 @@ session = DBSession()
 @app.route("/")
 @app.route("/myportfolio")
 def landingpage():
-    return "this will be the main landing page for viewers"
+    info = session.query(MyInfo).order_by(asc(MyInfo.id))
+    return render_template('main.html', info=info)
 
 @app.route("/resume")
 def myresume():
@@ -24,9 +25,8 @@ def myresume():
 
 @app.route("/contact")
 def contactme():
-    return "this page will display my contact information"
-
-
+    info = session.query(Contact).order_by(asc(Contact.id))
+    return render_template('contact.html', info=info)
 
 
 if __name__ == '__main__':

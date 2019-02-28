@@ -14,6 +14,8 @@ class MyInfo(Base):
 
     name = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
+    aboutme = Column(String(450), nullable = False)
+    skills = Column(String(80), nullable = False)
 
 class Resume(Base):
 
@@ -33,7 +35,7 @@ class Contact(Base):
     __tablename__ = 'contact_info'
 
     id = Column(Integer, primary_key = True)
-    phone = Column(String(80), nullable = False)
+    phone = Column(String(16), nullable = False)
     email = Column(String(80), nullable = False)
     myinfo_id = Column(Integer, ForeignKey('myinformation.id'))
     myinformation = relationship(MyInfo)

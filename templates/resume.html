@@ -12,9 +12,9 @@
         <nav class="navbar navbar-inverse navbar-fixed">
             <div class="container-fluid">
               <ul class="nav navbar-nav">
-                <li><a href="#">Portfolio</a></li>
-                <li class="active"><a href="#">My Resume</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li><a href="{{ url_for('landingpage') }}">About Me</a></li>
+                <li class="active"><a href="{{ url_for('myresume') }}">My Resume</a></li>
+                <li><a href="{{ url_for('contactme') }}">Contact Me</a></li>
               </ul>
             </div>
           </nav>
@@ -39,5 +39,7 @@
             {% endfor %}
         </div>
     </body>
-
+    <footer>
+        <p class="copyright">&copy; 2019 - Austin Ridings</p>
+    </footer>
 </html>

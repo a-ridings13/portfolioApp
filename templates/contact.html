@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="utf-8" width="device-width" initial-scale="1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/static/style.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        <nav class="navbar navbar-inverse navbar-fixed">
+            <div class="container-fluid">
+                <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('landingpage') }}">About Me</a></li>
+                <li><a href="{{ url_for('myresume') }}">My Resume</a></li>
+                <li class="active"><a href="{{ url_for('contactme') }}">Contact Me</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="row">
+            <h1 class="header">Contact Me:</h1>
+        </div>
+        <div class="container">
+            {% for i in info %}
+            <div class="panel">
+                {{ i.phone }}<br>
+                {{ i.email }}
+            </div>
+            {% endfor %}
+        </div>
+
+    </body>
+    <footer>
+        <p class="copyright">&copy; 2019 - Austin Ridings</p>
+    </footer>
+</html>

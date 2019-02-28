@@ -10,28 +10,31 @@
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
     </head>
-    <body style="background-color: lightgray;">
+    <body>
         <nav class="navbar navbar-inverse navbar-fixed">
             <div class="container-fluid">
               <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Portfolio</a></li>
-                <li><a href="#">My Resume</a></li>
-                <li><a href="#">Contact Me</a></li>
+                <li class="active"><a href="{{ url_for('landingpage') }}">About Me</a></li>
+                <li><a href="{{ url_for('myresume') }}">My Resume</a></li>
+                <li><a href="{{ url_for('contactme') }}">Contact Me</a></li>
               </ul>
             </div>
           </nav>
         <div class="container">
             <div class="row">
-                <h2 style="text-align: center">Portfolio Page</h2>
+                <h2 style="text-align: center">About Me</h2>
             </div>
 
             <div class="row">
                 <div class="panel">
-                    { Portfolio data here }
+                    { About Me here... }
                 </div>
             </div>
 
         </div>
     </body>
+    <footer>
+        <p class="copyright">&copy; 2019 - Austin Ridings</p>
+    </footer>
 
 </html>

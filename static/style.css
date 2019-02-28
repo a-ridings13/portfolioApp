@@ -1,2 +1,4 @@
 body        { background-color: dimgray; }
 h1.header   { text-align: center }
+h4.location { float: right; }
+p.copyright { text-align: center; color: white; }
