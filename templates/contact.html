@@ -1,6 +1,6 @@
 <html>
     <head>
-        <meta charset="utf-8" width="device-width" initial-scale="1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
         <link rel="stylesheet" href="/static/style.css">
 
@@ -9,6 +9,8 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" 
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed">
@@ -25,13 +27,54 @@
         </div>
         <div class="container">
             {% for i in info %}
-            <div class="panel">
-                {{ i.phone }}<br>
-                {{ i.email }}
-            </div>
+                <div class="panel">
+                    <div class="panel-heading">
+                        <h3>My Contact Information:</h3>
+                    </div>
+                    <div class="panel-body">
+                        <div class="well well-sm">
+                            <h4><span class="fa fa-phone"></span><strong> Phone:</strong> {{ i.phone }}</h4>
+                        </div>
+                        <div class="well well-sm">
+                            <h4><span class="fa fa-envelope"></span><strong> Email:</strong> {{ i.email }}</h4>
+                        </div>
+                    </div>
+                </div>
             {% endfor %}
-        </div>
 
+            <div class="panel">
+                <div class="panel-heading">
+                    <h3>Contact Form:</h3>
+                </div>
+                <div class="panel-body">
+                    <form class="form-horizontal" action="#" method="POST">
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="email">Email:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="subject">Subject:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="subject" placeholder="Enter Subject" name="subject">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="message">Message:</label>
+                            <div class="col-sm-10">          
+                                <textarea type="text" class="form-control" id="message" placeholder="Enter message" name="message"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group">        
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </body>
     <footer>
         <p class="copyright">&copy; 2019 - Austin Ridings</p>
