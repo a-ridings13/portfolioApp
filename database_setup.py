@@ -12,8 +12,8 @@ class MyInfo(Base):
 
     __tablename__ = 'myinformation'
 
-    name = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
+    name = Column(String(80), nullable = False)
     aboutme = Column(String(450), nullable = False)
     skills = Column(String(80), nullable = False)
 
@@ -21,8 +21,8 @@ class Resume(Base):
 
     __tablename__ = 'resume_data'
 
-    company = Column(String(80), nullable = False)
     id = Column(Integer, primary_key = True)
+    company = Column(String(80), nullable = False)
     title = Column(String(80), nullable = False)
     location = Column(String(250))
     description = Column(String(250))
