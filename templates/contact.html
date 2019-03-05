@@ -23,7 +23,7 @@
             </div>
         </nav>
         <div class="row">
-            <h1 class="header">Contact Me:</h1>
+            <h1 class="header">Contact Me</h1>
         </div>
         <div class="container">
             {% for i in info %}
@@ -47,11 +47,17 @@
                     <h3>Contact Form:</h3>
                 </div>
                 <div class="panel-body">
-                    <form class="form-horizontal" action="#" method="POST">
+                    <form class="form-horizontal" action="https://formspree.io/austinridings.dev@gmail.com" method="POST">
                         <div class="form-group">
                             <label class="control-label col-sm-2" for="email">Email:</label>
                             <div class="col-sm-10">
                                 <input type="text" class="form-control" id="email" placeholder="Enter Email" name="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label col-sm-2" for="name">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="name" placeholder="Enter Name" name="name">
                             </div>
                         </div>
                         <div class="form-group">
@@ -68,7 +74,7 @@
                         </div>
                         <div class="form-group">        
                             <div class="col-sm-offset-2 col-sm-10">
-                                <button type="submit" class="btn btn-primary">Submit</button>
+                                <button type="submit" class="btn btn-primary submit-button">Submit</button>
                             </div>
                         </div>
                     </form>

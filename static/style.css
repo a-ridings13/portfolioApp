@@ -1,6 +1,11 @@
-body        { background-color: dimgray; }
-h1.header   { text-align: center; color: wheat }
-h4.location { float: right; }
-p.copyright { text-align: center; color: white; }
-.panel      { background-color: lightgrey }
+body            { background-color: dimgray; }
+h1.header       { text-align: center; color: wheat }
+h4.location     { float: right; }
+p.copyright     { text-align: center; color: white; }
+.panel          { background-color: lightgrey }
 
+h2.name         { text-align: center; }
+h3.atomic       { text-align: center; color: ivory }
+.img-responsive { margin: 0 auto; padding-bottom: 10px}
+.submit-button  { float: right; }
+.atomicWebDev   { width: inherit; height: 600px }

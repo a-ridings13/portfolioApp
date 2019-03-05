@@ -3,10 +3,8 @@ from flask import Flask, render_template, url_for, redirect, jsonify
 from sqlalchemy import create_engine, desc, asc
 from sqlalchemy.orm import sessionmaker
 from database_setup import MyInfo, Base, Resume, Contact
-from flask_mail import Mail, Message
 
 app = Flask(__name__)
-mail = Mail(app)
 
 engine = create_engine('sqlite:///myportfolio.db', connect_args={'check_same_thread': False})
 Base.metadata.bind = engine

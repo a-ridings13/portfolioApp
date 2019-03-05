@@ -23,19 +23,31 @@
             </div>
           </nav>
         <div class="container">
-            <div class="row">
-                <h2 style="text-align: center">About Me</h2>
-            </div>
-
+            <img src="/static/me.png" class="img-rounded img-responsive" alt="My self" width="200" height="230">
+            {% for i in info %}
             <div class="row">
                 <div class="panel">
-                    { About Me here... }
+                    <div class="panel-body">
+                        <h2 class="name">{{i.name}}</h2><br>
+                        <strong>About Me:</strong><h4>{{i.aboutme}}</h4><br>
+                        <strong>Skills:</strong><h4>{{i.skills}}</h4>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+            <div class="row">
+                <h1 class="header">Some of my projects</h1>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="atomic">A responsive static web page, built using bootstrap and form submissions handled via formspree.io</h3>
+                        <iframe class="atomicWebDev" src="https://a-ridings13.github.io/atomicWebDev/"></iframe>
                 </div>
             </div>
 
         </div>
     </body>
-    <footer>
+    <footer><br>
         <p class="copyright">&copy; 2019 - Austin Ridings</p>
     </footer>
 
