@@ -8,4 +8,5 @@ h2.name         { text-align: center; }
 h3.atomic       { text-align: center; color: ivory }
 .img-responsive { margin: 0 auto; padding-bottom: 10px}
 .submit-button  { float: right; }
-.atomicWebDev   { width: inherit; height: 600px }
+.atomicWebDev   { width: inherit; height: 600px; margin: 0 auto; align-content: center}
+.form-control   { width: inherit}
